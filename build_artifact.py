@@ -192,7 +192,7 @@ print(strProjectVersionVcs, strProjectVersionVcsLong)
 # Get the build requirements for LUA5.1 and the externals.
 #
 strCwd = os.path.join(strCfg_workingFolder, 'lua5.1', 'build_requirements')
-for strMatch in glob.iglob(os.path.join(strCwd, 'lua5.1-lpeg-*.xml')):
+for strMatch in glob.iglob(os.path.join(strCwd, 'lua5.1-lpeglabel-*.xml')):
     os.remove(strMatch)
 
 astrCmd = [
@@ -209,9 +209,9 @@ astrCmd.append(strCfg_projectFolder)
 subprocess.check_call(' '.join(astrCmd), shell=True, cwd=strCwd, env=astrEnv)
 subprocess.check_call(strMake, shell=True, cwd=strCwd, env=astrEnv)
 
-astrMatch = glob.glob(os.path.join(strCwd, 'lua5.1-lpeg-*.xml'))
+astrMatch = glob.glob(os.path.join(strCwd, 'lua5.1-lpeglabel-*.xml'))
 if len(astrMatch) != 1:
-    raise Exception('No match found for "lua5.1-lpeg-*.xml" in "%s".' % strCwd)
+    raise Exception('No match found for "lua5.1-lpeglabel-*.xml" in "%s".' % strCwd)
 
 astrCmd = [
     strJonchki,
@@ -250,7 +250,7 @@ subprocess.check_call('%s pack' % strMake, shell=True, cwd=strCwd, env=astrEnv)
 # Get the build requirements for LUA5.4.
 #
 strCwd = os.path.join(strCfg_workingFolder, 'lua5.4', 'build_requirements')
-for strMatch in glob.iglob(os.path.join(strCwd, 'lua5.4-lpeg-*.xml')):
+for strMatch in glob.iglob(os.path.join(strCwd, 'lua5.4-lpeglabel-*.xml')):
     os.remove(strMatch)
 
 astrCmd = [
@@ -267,9 +267,9 @@ astrCmd.append(strCfg_projectFolder)
 subprocess.check_call(' '.join(astrCmd), shell=True, cwd=strCwd, env=astrEnv)
 subprocess.check_call(strMake, shell=True, cwd=strCwd, env=astrEnv)
 
-astrMatch = glob.glob(os.path.join(strCwd, 'lua5.4-lpeg-*.xml'))
+astrMatch = glob.glob(os.path.join(strCwd, 'lua5.4-lpeglabel-*.xml'))
 if len(astrMatch) != 1:
-    raise Exception('No match found for "lua5.4-lpeg-*.xml" in "%s".' % strCwd)
+    raise Exception('No match found for "lua5.4-lpeglabel-*.xml" in "%s".' % strCwd)
 
 astrCmd = [
     strJonchki,

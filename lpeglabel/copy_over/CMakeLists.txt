@@ -42,9 +42,9 @@ INSTALL(TARGETS TARGET_lpeglabel
 IF((${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND (${CMAKE_COMPILER_IS_GNUCC}))
 	# Here are the MinGW specific tests.
 	ADD_TEST(NAME lpeglabel_MinGW_DLL_dependencies
-	         COMMAND "${PYTHON_EXE}" ${TEST_SCRIPT_FOLDER}/mingw_dll_dependencies.py -u lua5.1 -u lua5.2 -u lua5.3 -u lua5.4 $<TARGET_FILE:TARGET_lpeg>)
+	         COMMAND "${PYTHON_EXE}" ${TEST_SCRIPT_FOLDER}/mingw_dll_dependencies.py -u lua5.1 -u lua5.2 -u lua5.3 -u lua5.4 $<TARGET_FILE:TARGET_lpeglabel>)
 ENDIF((${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND (${CMAKE_COMPILER_IS_GNUCC}))
 
 # Install all LUA scripts.
-INSTALL(FILES re.lua
+INSTALL(FILES relabel.lua
         DESTINATION ${INSTALL_DIR_LUA_SCRIPTS})
