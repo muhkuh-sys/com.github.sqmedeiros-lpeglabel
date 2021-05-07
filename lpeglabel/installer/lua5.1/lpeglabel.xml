@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jonchki-artifact version="1.0">
+	<info group="com.github.sqmedeiros"
+	      module="lpeglabel"
+	      artifact="lua5.1-lpeglabel"
+	      version="@PROJECT_VERSION@"
+	      vcs-id="@PROJECT_VERSION_VCS@"
+	      extension="tar.xz"
+	      platform="@JONCHKI_PLATFORM@">
+		<license name="MIT/X11"/>
+		<author name="Sérgio Medeiros" url="https://github.com/sqmedeiros/lpeglabel/" />
+		<description>
+			LPegLabel is a conservative extension of the LPeg library that provides an implementation of Parsing Expression Grammars (PEGs) with labeled failures.
+		</description>
+	</info>
+	<dependencies>
+		<build-dependency group="org.lua" module="lua" artifact="lua" version="5.1"/>
+		<dependency group="org.lua" module="lua" artifact="lua"/>
+	</dependencies>
+</jonchki-artifact>

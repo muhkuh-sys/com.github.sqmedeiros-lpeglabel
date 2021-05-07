@@ -1,0 +1,9 @@
+
+# adapted Files of repo Lpeglabel
+CMakeLists.txt
+/lpeglabel/__README__.txt
+/lpeglabel/lpeglabel-1.6.0-1.tar.gz
+/lpeglabel/CMakeLists.txt
+/lpeglabel/copy_over/CMakeLists.txt
+/lpeglabel/lua5.1/lpeglabel.xml
+/lpeglabel/lua5.4/lpeglabel.xml
