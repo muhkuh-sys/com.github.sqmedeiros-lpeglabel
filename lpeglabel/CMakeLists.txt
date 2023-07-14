@@ -13,9 +13,9 @@ ELSE(CMAKE_VERSION VERSION_LESS 3.12.0)
 ENDIF(CMAKE_VERSION VERSION_LESS 3.12.0)
 
 
-SET(VERSION_EXTERNAL "1.6.0")
+SET(VERSION_EXTERNAL "1.6.2")
 SET(VERSION_DEV      "-1")
-SET(VERSION_PACKAGE  "2")
+SET(VERSION_PACKAGE  "1")
 SET(PROJECT_VERSION  "${VERSION_EXTERNAL}.${VERSION_PACKAGE}")
 
 # Get the VCS version for the jonchki configuration.
@@ -48,7 +48,7 @@ IF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
 	ExternalProject_Add(TARGET_lpeglabel
 	                    PREFIX ${CMAKE_CURRENT_BINARY_DIR}/lpeglabel
 	                    URL ${CMAKE_CURRENT_SOURCE_DIR}/lpeglabel-${VERSION_EXTERNAL}${VERSION_DEV}.tar.gz
-	                    URL_HASH SHA1=8777b6fee92b30cd2accc0d4f58c8aa772b726a1
+	                    URL_HASH SHA1=cb9b2d7a0cc1c25d9d6a7873f1ca79fcadee2c82
 	                    PATCH_COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/copy_over ${CMAKE_CURRENT_BINARY_DIR}/lpeglabel/src/TARGET_lpeglabel
 	                    CMAKE_ARGS ${PRJ_CMAKE_ARGS}
 	                    TEST_BEFORE_INSTALL 1

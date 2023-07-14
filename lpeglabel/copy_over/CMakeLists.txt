@@ -13,11 +13,11 @@ ENDIF(CMAKE_VERSION VERSION_LESS 3.12.0)
 
 # Build the Lua module.
 ADD_LIBRARY(TARGET_lpeglabel MODULE
-            lpcap.c
-            lpcode.c
-            lpprint.c
-            lptree.c
-            lpvm.c)
+            lplcap.c
+            lplcode.c
+            lplprint.c
+            lpltree.c
+            lplvm.c)
 TARGET_INCLUDE_DIRECTORIES(TARGET_lpeglabel
                            PRIVATE ${LUA_INCLUDE_DIR})
 IF((${CMAKE_SYSTEM_NAME} STREQUAL "Windows") AND (${CMAKE_COMPILER_IS_GNUCC}))
