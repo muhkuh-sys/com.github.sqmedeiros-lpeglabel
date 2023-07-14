@@ -36,16 +36,16 @@ tHash_SHA512 = hashlib.sha512()
 
 tFile = open(strInputPath, 'rb')
 while True:
-    strData = tFile.read(4096)
-    if not strData:
+    aucData = tFile.read(4096)
+    if not aucData:
         break
 
-    tHash_MD5.update(strData)
-    tHash_SHA1.update(strData)
-    tHash_SHA224.update(strData)
-    tHash_SHA256.update(strData)
-    tHash_SHA384.update(strData)
-    tHash_SHA512.update(strData)
+    tHash_MD5.update(aucData)
+    tHash_SHA1.update(aucData)
+    tHash_SHA224.update(aucData)
+    tHash_SHA256.update(aucData)
+    tHash_SHA384.update(aucData)
+    tHash_SHA512.update(aucData)
 
 tFile.close()
 
